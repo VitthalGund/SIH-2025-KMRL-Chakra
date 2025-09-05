@@ -1,5 +1,59 @@
 # SIH-2025-KMRL-Chakra
 
+# If the documents have low resolution images, then using computer vision techniques, low resolution images would be converted to high resolution images. Some of those techniques are:
+## Image Interpolation Techniques : 
+1. Linear Interpolation
+
+Linear interpolation is one of the simplest and fastest methods for resizing images. It calculates the pixel value by averaging the nearest neighbors in a straight line.
+
+How it works: For each pixel, the new value is calculated by taking a weighted average of the closest pixels from the original image. This method is suitable for smooth resizing but may not provide the best quality for complex images.
+
+Use case: Best used when speed is important and when working with simpler images (e.g., less complex graphics or basic photographs).
+
+
+<img width="347" height="288" alt="image" src="https://github.com/user-attachments/assets/c16d4aea-9065-458f-aa82-62c89ec05a74" />
+
+----
+
+2. Cubic Interpolation
+
+Cubic interpolation is more advanced and provides better quality than linear interpolation. It uses the closest 4x4 neighborhood of known pixels to estimate the pixel values. This method gives a smoother and more detailed output, making it suitable for high-quality image enlargements.
+
+How it works: It fits a cubic polynomial to the pixel values in the neighborhood of the desired pixel, offering a higher degree of smoothness.
+
+Use case: Ideal for enlarging images where more detail and sharpness are required, like photographs or images with gradients.
+
+<img width="344" height="277" alt="image" src="https://github.com/user-attachments/assets/13511795-8549-4792-ba73-fc4f0179c6ac" />
+
+----
+
+3. Lanczos Interpolation
+
+Lanczos interpolation is an advanced resampling method that uses a sinc function for interpolation, making it highly effective for image resizing, particularly for enlarging images. It uses a larger neighborhood of pixels (typically 8x8) to calculate the new pixel values, ensuring better preservation of details and sharpness.
+
+How it works: It applies a sinc function to a weighted combination of pixels, making it especially useful for high-quality upscaling. It’s effective at preserving image sharpness while minimizing artifacts like aliasing.
+
+Use case: Used for high-quality enlargements where detail preservation and sharpness are critical.
+
+
+<img width="337" height="269" alt="image" src="https://github.com/user-attachments/assets/3659e36b-5519-4f1c-8d68-56aed5a2ef11" />
+
+
+----
+
+Image Denoising
+
+In this project, Non-Local Means Denoising is used for reducing noise in images. This method is effective in preserving the edges while reducing noise in various types of images (e.g., photographs, medical images, etc.).
+
+Non-Local Means Denoising
+
+How it works: Non-local means denoising works by comparing all pixels in an image with each other. It estimates the denoised value of each pixel based on a weighted average of similar pixels within a specified window (search window). It preserves sharp details, making it ideal for images that have noise but require edge details to be maintained.
+
+<img width="261" height="193" alt="image" src="https://github.com/user-attachments/assets/f5f4e51c-5d2a-450e-8efc-442e48acd59b" />
+
+
+----
+
 
 ### The Scenario
 
