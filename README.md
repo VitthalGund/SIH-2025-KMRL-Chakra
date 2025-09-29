@@ -140,3 +140,9 @@ If the same request was made by a user with ID `"FIN_456"`, the `answer` would b
 ```
 
 This API structure effectively delivers on all your key features: a direct LLM-powered answer, verifiable sources, automated cross-referencing, and most importantly, the hyper-personalized summaries that make your solution unique.
+
+---
+
+The references : 
+<img width="973" height="408" alt="image" src="https://github.com/user-attachments/assets/1ee0ef73-7a61-42fe-91a2-3134efbcdf93" />
+
